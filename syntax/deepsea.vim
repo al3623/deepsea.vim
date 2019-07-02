@@ -2,7 +2,7 @@ if exists("b:current_syntax")
     finish
 endif
 
-syn keyword myKeyword if then else let in case switch end error event log load call assert default type
+syn keyword myKeyword if then else let in case switch end error event log load call assert default
 
 syn match myFunction "[a-zA-Z][a-zA-Z0-9_]*" contained
 
@@ -14,7 +14,7 @@ syn region myComment start="{-" end="-}" extend
 syn region myString start='"' skip=/\v\\./ end='"'
 syn region myString start="'" skip=/\v\\./ end="'"
 
-syn keyword myType Int Float Char Bool
+syn keyword myType Int Float Char Bool type
 
 syn match myApp "$"
 
