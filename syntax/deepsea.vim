@@ -2,30 +2,29 @@ if exists("b:current_syntax")
     finish
 endif
 
-syn keyword deepseaKeyword if then else let in case switch end error event log load call assert default 
+syn keyword myKeyword if then else let in case switch end error event log load call assert default 
 
-syn match ripplFunction "[a-zA-Z][a-zA-Z0-9_]*" contained
+syn match myFunction "[a-zA-Z][a-zA-Z0-9_]*" contained
 
-syn match ripplNumber '\<[+-]\=\d\+\>'
+syn match myNumber '\<[+-]\=\d\+\>'
 
-syn match ripplComment "--.*$"
-syn region ripplComment start="{-" end="-}" extend
+syn match myComment "--.*$"
+syn region myComment start="{-" end="-}" extend
 
-syn region ripplString start='"' skip=/\v\\./ end='"'
-syn region ripplString start="'" skip=/\v\\./ end="'"
+syn region myString start='"' skip=/\v\\./ end='"'
+syn region myString start="'" skip=/\v\\./ end="'"
 
-syn match ripplApp "[\d126]"
-syn keyword ripplBool true false
+syn keyword myType Int Float Char Bool
 
-syn keyword ripplType Int Float Char Bool
+syn match myApp "$"
 
-hi def link ripplKeyword Keyword
-hi def link ripplBool Boolean
-hi def link ripplType Type
-hi def link ripplFunction Identifier
-hi def link ripplNumber Number
-hi def link ripplApp NonText
-hi def link ripplComment Comment
-hi def link ripplString String
+hi def link myKeyword Keyword
+hi def link myBool Boolean
+hi def link myType Type
+hi def link myFunction Identifier
+hi def link myNumber Number
+hi def link myApp NonText
+hi def link myComment Comment
+hi def link myString String
 
 let b:current_syntax = "deepsea"
