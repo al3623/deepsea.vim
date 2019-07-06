@@ -4,7 +4,7 @@ endif
 
 syn keyword myKeyword if then else let in case switch end error event log load call assert default put
 
-syn match myFunction "[a-zA-Z][a-zA-Z0-9_]*" contained
+syn match myFunction "[a-zA-Z][a-zA-Z0-9_']*" contained
 
 syn match myNumber '\<[+-]\=\d\+\>'
 
